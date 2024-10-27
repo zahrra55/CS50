@@ -2,5 +2,7 @@
 
 int main()
 {
-    printf("Hello, world\n");
+    string answer=grt_sring("What's your name? ");
+    printf("Hello, s%\n", answer)
+
 }

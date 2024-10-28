@@ -2,7 +2,7 @@
 
 int main()
 {
-    string answer=grt_string("What's your name? ");
-    printf("Hello, s%\n", answer);
+    string answer=get_string("What's your name? ");
+    printf("Hello, %s\n", answer);
 
 }

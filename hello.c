@@ -4,7 +4,7 @@ int main(void)
 {
     string name = get_string("What's your name? ");
     //printf("Hello, %s\n", name);
-    string age = get_string("How old are you? ");
-    long int phone = get_long("What's your phone number? ");
-    printf("Hello,%s\nYou are %s years old\nYour phone number is: %li \n ",name,age,phone);
+    int age = get_int("How old are you? ");
+    string phone = get_string("What's your phone number? ");
+    printf("Hello,%s\nYou are %iyears old\nYour phone number is: %s \n ",name,age,phone);
 }

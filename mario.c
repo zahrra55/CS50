@@ -11,9 +11,10 @@ int main(void)
         printf("\n");
     }
 
+
     for (int i = 0; i < n; i++)
     {
-        for (int j = i+1; j < i ; j++)
+        for (int j = n-1 ; j < i - 1 && i >= 0 ; j++)
             printf("#");
         printf("\n");
     }

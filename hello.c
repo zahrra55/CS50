@@ -6,5 +6,5 @@ int main(void)
     //printf("Hello, %s\n", name);
     int age = get_int("How old are you? ");
     string phone = get_string("What's your phone number? ");
-    printf("Hello,%s\nYou are %iyears old\nYour phone number is: %s \n ",name,age,phone);
+    printf("Hello,%s\nYou are %i years old\nYour phone number is: %s \n ",name,age,phone);
 }

@@ -4,7 +4,6 @@
 int main(void){
     int n=get_int("Howmany blocks do you want? ");
     for(int i=0;i<n;i++){
-       printf("\n");
         for(int j=i+1; j<i;j++)
         printf("#");
     }

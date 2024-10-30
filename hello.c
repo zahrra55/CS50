@@ -2,6 +2,9 @@
 #include<cs50.h>
 int main(void)
 {
-    string answer=get_string("What's your name? ");
-    printf("Hello, %s\n", answer);
+    string name = get_string("What's your name? ");
+    //printf("Hello, %s\n", name);
+    string age = get_string("How old are you? ");
+    long int phone = get_string("What's your phone number? ");
+    printf("Hello,%s\n ",name,age, phone);
 }

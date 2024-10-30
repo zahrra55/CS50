@@ -6,5 +6,5 @@ int main(void)
     //printf("Hello, %s\n", name);
     string age = get_string("How old are you? ");
     long int phone = get_long("What's your phone number? ");
-    printf("Hello,%s\nYou are %s years old\nYour phone number is: %s \n ",name,age,(string)phone);
+    printf("Hello,%s\nYou are %s years old\nYour phone number is: %li \n ",name,age,phone);
 }

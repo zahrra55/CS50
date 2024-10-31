@@ -20,5 +20,9 @@ int main(void)
 
 void print_rwo(int b)
 {
-
+    for(int i = 0; i < b; i++)
+    {
+        printf("#");
+    }
+    printf("\n");
 }

@@ -12,10 +12,11 @@ int main(void)
     }
     while(n < 1 || n > 8);
 
+    //for(int j = 0; j < d; j++)
     for(int i = 0; i < n; i++)
     {
         // Print the row.
-        print_rwo(,i+1);
+        print_rwo(d,i+1);
     }
 }
 

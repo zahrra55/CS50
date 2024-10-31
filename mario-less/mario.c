@@ -23,7 +23,7 @@ int main(void)
 void print_rwo(int s,int b)
 {
     for(int j = b-1; j < s; j++)
-    printf(" ");
+    printf(".");
 
     for(int i = 0; i < b; i++)
     {

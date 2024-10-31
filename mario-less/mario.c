@@ -3,5 +3,5 @@
 // this is less-mario
 int main(void)
 {
-    
+    int n = get_int("Height: ");
 }

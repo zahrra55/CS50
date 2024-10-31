@@ -13,7 +13,7 @@ int main(void)
 
 
 
-for (int i = 0; i < n; i++)
+/*for (int i = 0; i < n; i++)
     {
         for (int j = 1; j < i + 1; j++)
             for (int k = 1; k < i + 1; k++)
@@ -21,6 +21,6 @@ for (int i = 0; i < n; i++)
         printf("#");
     printf("\n");
     }
-
+*/
 }
 

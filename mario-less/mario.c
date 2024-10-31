@@ -14,13 +14,13 @@ int main(void)
     for(int i = 0; i < n; i++)
     {
         // Print the row.
-        print_rwo(i+1);
+        print_rwo(,i+1);
     }
 }
 
 void print_rwo(int s,int b)
 {
-    for(int j = 0; j < s; j++)
+    for(int j = b-1; j < s; j--)
     for(int i = 0; i < b; i++)
     {
         printf("#");

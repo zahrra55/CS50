@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 // this is less-mario
-void print_rwo(int s,int b);
+void print_rwo(int s, int b);
 int main(void)
 {
     int n;
@@ -9,21 +9,21 @@ int main(void)
     {
         n = get_int("Height: ");
     }
-    while(n < 1 || n > 8);
+    while (n < 1 || n > 8);
 
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         // Print the row.
-        print_rwo(n-1,i+1);
+        print_rwo(n - 1, i + 1);
     }
 }
 
-void print_rwo(int s,int b)
+void print_rwo(int s, int b)
 {
-    for(int j = b-1; j < s; j++)
-    printf(" ");
+    for (int j = b - 1; j < s; j++)
+        printf(" ");
 
-    for(int i = 0; i < b; i++)
+    for (int i = 0; i < b; i++)
     {
         printf("#");
     }

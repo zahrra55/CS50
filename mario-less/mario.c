@@ -14,7 +14,7 @@ int main(void)
     for(int i = 0; i < n; i++)
     {
         // Print the row.
-        print_rwo(n,i+1);
+        print_rwo(n-1,i+1);
     }
 }
 

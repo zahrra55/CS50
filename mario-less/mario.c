@@ -22,7 +22,7 @@ void print_rwo(int s,int b)
 {
     for(int i = 0; i < b; i++)
     {
-        printf("#");
+        printf(".");
     }
     printf("\n");
 }

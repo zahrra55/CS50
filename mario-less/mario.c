@@ -4,11 +4,11 @@
 void print_rwo(int s,int b);
 int main(void)
 {
-    int n,s;
+    int n;
     do
     {
         n = get_int("Height: ");
-        s = get_int("Spaces: ");
+        //s = get_int("Spaces: ");
     }
     while(n < 2 || n > 7);
 
@@ -16,7 +16,7 @@ int main(void)
     for(int i = 0; i < n; i++)
     {
         // Print the row.
-        print_rwo(s,i+1);
+        print_rwo(n,i+1);
     }
 }
 

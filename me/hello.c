@@ -1,6 +1,6 @@
-#include <stdio.h>
 #include <cs50.h>
-
+#include <stdio.h>
+// this is hello.
 int main(void)
 {
     string name = get_string("What's your name?\n");

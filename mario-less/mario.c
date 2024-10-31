@@ -4,10 +4,11 @@
 void print_rwo(int s,int b);
 int main(void)
 {
-    int n;
+    int n,d;
     do
     {
         n = get_int("Height: ");
+        d = get_int("Dots: ");
     }
     while(n < 1 || n > 8);
 

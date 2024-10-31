@@ -10,7 +10,7 @@ int main(void)
         n = get_int("Height: ");
         s = get_int("Spaces: ");
     }
-    while(n < 1 || n > 8);
+    while(n < 1 || n < 8);
 
     //for(int j = 0; j < d; j++)
     for(int i = 0; i < n; i++)

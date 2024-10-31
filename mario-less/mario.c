@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 // this is less-mario
-void print_rwo(int b);
+void print_rwo(int s,int b);
 int main(void)
 {
     int n;
@@ -18,7 +18,7 @@ int main(void)
     }
 }
 
-void print_rwo(int b)
+void print_rwo(int s,int b)
 {
     for(int i = 0; i < b; i++)
     {

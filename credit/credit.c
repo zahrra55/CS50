@@ -36,5 +36,6 @@ bool Luhn_s_Algorithm(long n)
         }
         n /= 10; // complete the process
         pos++; // increse the pos value
+        return (sum % 10 == 0);
     }
 }

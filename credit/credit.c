@@ -32,8 +32,9 @@ bool Luhn_s_Algorithm(long n)
         }
         else
         {
-            sum += digit; // adding the rest of thw
+            sum += digit; // adding the rest of the digits
         }
-        pos++;
+        n /= 10; // complete the process
+        pos++; // increse the pos value
     }
 }

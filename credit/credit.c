@@ -10,5 +10,6 @@ int main(void)
         Number = get_long("Number: ");
     }
     while(Number < 0);
-    for(int i =0; i < )
+    if()
+    //for(int i =0; i < )
 }

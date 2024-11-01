@@ -24,7 +24,7 @@ int main(void)
         long fir_sec_dgts = Cnumber;
         while(fir_sec_dgts >= 100)
         {
-            fir_sec_dgts
+            fir_sec_dgts /= 10;
         }
     }
     else{

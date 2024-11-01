@@ -12,7 +12,7 @@ int main(void)
     while(Number < 0);
     if(){//if lohn algorithm is right
         //check the card type
-        
+
     }
     else{
         printf("INVALID\n");
@@ -20,5 +20,6 @@ int main(void)
 }
 bool Luhn_s_Algorithm(long n)
 {
-
+    int sum = 0;
+    
 }

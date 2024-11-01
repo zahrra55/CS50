@@ -15,7 +15,12 @@ int main(void)
 
     if(Luhn_s_Algorithm(Cnumber)){//if lohn algorithm is right
         //check the card type
-        if()
+        long s = Cnumber;
+        while(s > 0)
+        {
+            s /= 10;
+            len++;
+        }
     }
     else{
         printf("INVALID\n");

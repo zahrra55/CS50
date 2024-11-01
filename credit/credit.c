@@ -11,8 +11,9 @@ int main(void)
     }
     while(Number < 0);
 
-    if(){//if lohn algorithm is right
+    if(Luhn_s_Algorithm()){//if lohn algorithm is right
         //check the card type
+
     }
     else{
         printf("INVALID\n");
@@ -36,6 +37,6 @@ bool Luhn_s_Algorithm(long n)
         }
         n /= 10; // complete the process
         pos++; // increse the pos value
-        return (sum % 10 == 0);
+        return (sum % 10 ) == 0;
     }
 }

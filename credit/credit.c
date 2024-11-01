@@ -27,6 +27,7 @@ int main(void)
             fir_sec_dgts /= 10;
         }
         if(len == 15 && (fir_sec_dgts == 34 || fir_sec_dgts == 37 ))
+            printf("AMEX\n");
     }
     else{
         printf("INVALID\n");

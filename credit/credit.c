@@ -32,7 +32,7 @@ bool Luhn_s_Algorithm(long n)
         }
         else
         {
-            sum += digit
+            sum += digit; // adding the rest of thw
         }
         pos++;
     }

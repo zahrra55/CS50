@@ -4,7 +4,12 @@
 
 int main(void)
 {
-    long Number = get_long("Number: ");
+    long Number;
+    do
+    {
+        Number = get_long("Number: ");
+    }
+    while(Number < 0)
     for(int i =0; i < munber.length)
 }
 

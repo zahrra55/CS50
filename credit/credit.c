@@ -30,6 +30,10 @@ bool Luhn_s_Algorithm(long n)
             digit *= 2; // multiplying every other digit by 2
             sum += (digit / 10) + (digit % 10); // if more than 10, make 2 digits of it
         }
-        pos++
+        else
+        {
+            sum += digit
+        }
+        pos++;
     }
 }

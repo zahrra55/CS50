@@ -4,16 +4,16 @@
 
 int main(void)
 {
-    long Number;
+    long Cnumber;
     do
     {
-        Number = get_long("Number: ");
+        Cnumber = get_long("Number: ");
     }
-    while(Number < 0);
+    while(Cnumber < 0);
 
-    if(Luhn_s_Algorithm()){//if lohn algorithm is right
+    if(Luhn_s_Algorithm(Cnumber)){//if lohn algorithm is right
         //check the card type
-
+        if()
     }
     else{
         printf("INVALID\n");

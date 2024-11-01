@@ -1,10 +1,12 @@
 #include <cs50.h>
 #include <stdio.h>
 
+bool Luhn_s_Algorithm(long n);
 
 int main(void)
 {
     long Cnumber;
+    int len = 0,
     do
     {
         Cnumber = get_long("Number: ");

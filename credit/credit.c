@@ -10,7 +10,7 @@ int main(void)
         Number = get_long("Number: ");
     }
     while(Number < 0);
-    
+
     if(){//if lohn algorithm is right
         //check the card type
     }
@@ -21,6 +21,6 @@ int main(void)
 
 bool Luhn_s_Algorithm(long n)
 {
-    int sum = 0;
-
+    int sum = 0, pos = 0;
+    n
 }

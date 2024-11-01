@@ -10,6 +10,11 @@ int main(void)
         Number = get_long("Number: ");
     }
     while(Number < 0);
-    if()
-    //for(int i =0; i < )
+    if(){//if lohn algorithm is right
+        //check the card type
+    }
+    else{
+        printf("INVALID\n");
+    }
 }
+bool Luhn_s_Algorithm

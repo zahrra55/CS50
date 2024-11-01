@@ -21,6 +21,11 @@ int main(void)
             s /= 10;
             len++;
         }
+        long fir_sec_dgts = Cnumber;
+        while(fir_sec_dgts >= 100)
+        {
+            fir_sec_dgts
+        }
     }
     else{
         printf("INVALID\n");

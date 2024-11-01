@@ -26,6 +26,7 @@ int main(void)
         {
             fir_sec_dgts /= 10;
         }
+        
     }
     else{
         printf("INVALID\n");

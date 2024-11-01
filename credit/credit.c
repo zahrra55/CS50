@@ -22,5 +22,9 @@ int main(void)
 bool Luhn_s_Algorithm(long n)
 {
     int sum = 0, pos = 0;
-    n
+    while(n > 0)
+    {
+        int digit = n % 10; //finding the last digit
+        
+    }
 }

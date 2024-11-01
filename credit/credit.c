@@ -6,7 +6,7 @@ bool Luhn_s_Algorithm(long n);
 int main(void)
 {
     long Cnumber;
-    int len = 0,
+    int len = 0;
     do
     {
         Cnumber = get_long("Number: ");

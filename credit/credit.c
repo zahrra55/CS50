@@ -13,7 +13,8 @@ int main(void)
     }
     while(Cnumber < 0);
 
-    if(Luhn_s_Algorithm(Cnumber)){//if lohn algorithm is right
+    if(Luhn_s_Algorithm(Cnumber))
+    {//if lohn algorithm is right
         //check the card type
         long s = Cnumber;
         while(s > 0)

@@ -28,6 +28,12 @@ int main(void)
         }
         if(len == 15 && (fir_sec_dgts == 34 || fir_sec_dgts == 37 ))
             printf("AMEX\n");
+        else if(len == 16 && (fir_sec_dgts >= 51 && fir_sec_dgts >= 55 ))
+            printf("MASTERCARD\n");
+        else if((len == 13 || len == 16) && (fir_sec_dgts / 10 == 4 ))
+            printf("VISA\n");
+        else
+        printf("INVALID\n");
     }
     else{
         printf("INVALID\n");

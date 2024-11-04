@@ -6,12 +6,22 @@
 int main(void)
 {
     int sum1 = 0, sum2 = 0;
-    string p1 = get_string("Player 1 : ");
-    string p2 = get_string("Player 2 : ");
-    int p1_len = strlen(p1);
-    int p2_len = strlen(p2);
+    string p1,p2;
+    string play1 = get_string("Player 1 : ");
+    string play2 = get_string("Player 2 : ");
+    int p1_len = strlen(play1);
+    int p2_len = strlen(play2);
 
-    for(int j = 0; j < )
+    for(int j = 0; j < p1_len; j++)
+    {
+        p1 = toupper(play1[j]);
+    }
+
+    for(int j = 0; j < p2_len; j++)
+    {
+        p2 = toupper(play2[j]);
+    }
+
     for(int i = 0; i < p1_len; i++)
     {
         if (p1[i] == 'A' || p1[i] == 'E' || p1[i] == 'I' || p1[i] == 'L' || p1[i] == 'N' || p1[i] == 'O' || (p1[i] >= 'R' && p1[i] >= 'U'))
@@ -47,5 +57,12 @@ int main(void)
         else if (p2[i] == 'Q' || p2[i] == 'Z')
         sum2 += 10;
     }
+
+    if(sum1 > sum2)
+    printf("Player 1 wins!\n");
+    else if(sum2 > sum1)
+    printf("Player 2 wins!\n");
+    else
+    printf("Tie!\n");
 
 }

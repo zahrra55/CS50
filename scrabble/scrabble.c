@@ -6,6 +6,7 @@
 int main(void)
 {
     int sum1 = 0, sum2 = 0;
+    // Prompt the user for two words
     string play1 = get_string("Player 1 : ");
     string play2 = get_string("Player 2 : ");
     int p1_len = strlen(play1);
@@ -24,6 +25,8 @@ int main(void)
         p2[j] = toupper(play2[j]);
     }
     p2[p2_len] = '\0';
+
+    // Compute the score of each word
 
     for (int i = 0; i < p1_len; i++)
     {
@@ -66,6 +69,8 @@ int main(void)
         else
             sum2 += 0;
     }
+
+    // Print the winner
 
     if (sum1 > sum2)
         printf("Player 1 wins!\n");

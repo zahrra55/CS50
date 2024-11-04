@@ -26,14 +26,17 @@ int main(void)
 int count_letters(string text)
 {
     // Return the number of letters in text
+    return 0;
 }
 
 int count_words(string text)
 {
     // Return the number of words in text
+        return 0;
 }
 
 int count_sentences(string text)
 {
     // Return the number of sentences in text
+        return 0;
 }

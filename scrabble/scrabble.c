@@ -15,14 +15,14 @@ int main(void)
     char p1[p1_len + 1];
     for(int j = 0; j < p1_len; j++)
     {
-        p1 = toupper(play1[j]);
+        p1[j] = toupper(play1[j]);
     }
     p1[p1_len] = '\0';
 
     char p2[p2_len + 1];
     for(int j = 0; j < p2_len; j++)
     {
-        p2 = toupper(play2[j]);
+        p2[j] = toupper(play2[j]);
     }
     p2[p2_len] = '\0';
 
@@ -42,6 +42,8 @@ int main(void)
         sum1 += 8;
         else if (p1[i] == 'Q' || p1[i] == 'Z')
         sum1 += 10;
+        else
+        sum1 += 0;
     }
 
     for(int i = 0; i < p2_len; i++)
@@ -60,6 +62,8 @@ int main(void)
         sum2 += 8;
         else if (p2[i] == 'Q' || p2[i] == 'Z')
         sum2 += 10;
+        else
+        sum2 += 0;
     }
 
     if(sum1 > sum2)

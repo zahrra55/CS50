@@ -6,21 +6,25 @@
 int main(void)
 {
     int sum1 = 0, sum2 = 0;
-    string p1,p2;
+    //string p1,p2;
     string play1 = get_string("Player 1 : ");
     string play2 = get_string("Player 2 : ");
     int p1_len = strlen(play1);
     int p2_len = strlen(play2);
 
+    char p1[p1_len + 1];
     for(int j = 0; j < p1_len; j++)
     {
         p1 = toupper(play1[j]);
     }
+    p1[p1_len] = '\0';
 
+    char p2[p2_len + 1];
     for(int j = 0; j < p2_len; j++)
     {
         p2 = toupper(play2[j]);
     }
+    p2[p2_len] = '\0';
 
     for(int i = 0; i < p1_len; i++)
     {

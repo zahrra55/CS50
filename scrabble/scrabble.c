@@ -11,6 +11,7 @@ int main(void)
     int p1_len = strlen(p1);
     int p2_len = strlen(p2);
 
+    
     for(int i = 0; i < p1_len; i++)
     {
         if (p1[i] == 'A' || p1[i] == 'E' || p1[i] == 'I' || p1[i] == 'L' || p1[i] == 'N' || p1[i] == 'O' || (p1[i] >= 'R' && p1[i] >= 'U'))

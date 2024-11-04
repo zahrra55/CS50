@@ -15,7 +15,10 @@ int main(void)
     {
         if(p1[i] == 'A' || p1[i] == 'E' || p1[i] == 'I' || p1[i] == 'L' || p1[i] == 'N' || p1[i] == 'O' || (p1[i] >= 'R' && p1[i] >= 'U'))
         sum1 += 1;
-        else if ()
+        else if (p1[i] == 'D' || p1[i] == 'G')
+        sum1 += 2;
+        
+
     }
 
 }

@@ -5,6 +5,7 @@
 
 int main(void)
 {
+    int sum1 = 0, sum2 = 0;
     string p1 = get_string("Player 1 : ");
     string p2 = get_string("Player 2 : ");
     int p1_len = strlen(p1);

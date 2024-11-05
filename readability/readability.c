@@ -28,7 +28,7 @@ int count_letters(string text)
     int No_letters = 0;
     // Return the number of letters in text
     for (int i = 0; text[i] != '\0'; i++)
-        if ()
+        if (text[i] >= )
     return 0;
 }
 

@@ -1,5 +1,5 @@
-#include <ctype.h>
 #include <cs50.h>
+#include <ctype.h>
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
@@ -21,9 +21,8 @@ int main(void)
 
     // Compute the Coleman-Liau index
     // Print the grade level
-    
-    Coleman_Liau(words,  letters, sentences);
 
+    Coleman_Liau(words, letters, sentences);
 }
 
 int count_letters(string text)
@@ -32,7 +31,7 @@ int count_letters(string text)
     // Return the number of letters in text
     for (int i = 0; text[i] != '\0'; i++)
         if ((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
-        n++;
+            n++;
     return n;
 }
 
@@ -42,8 +41,8 @@ int count_words(string text)
     int n = 0;
     for (int i = 0; text[i] != '\0'; i++)
         if (text[i] == 32)
-        n++;
-    return n+1;
+            n++;
+    return n + 1;
 }
 
 int count_sentences(string text)
@@ -51,15 +50,15 @@ int count_sentences(string text)
     // Return the number of sentences in text
     int n = 0;
     for (int i = 0; text[i] != '\0'; i++)
-        if (text[i] == '.' || text[i] == '!'|| text[i] == '?')
-        n++;
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
+            n++;
     return n;
 }
 
 void Coleman_Liau(int w, int l, int s)
 {
-    float L = ((float)l / (float)w) * 100;
-    float S = ((float)s / (float)w) * 100;
+    float L = ((float) l / (float) w) * 100;
+    float S = ((float) s / (float) w) * 100;
     float index = 0.0588 * L - 0.296 * S - 15.8;
     int g = round(index);
     if (g < 1)
@@ -67,6 +66,5 @@ void Coleman_Liau(int w, int l, int s)
     else if (g > 16)
         printf("Grade 16+\n");
     else
-    printf("Grade %i\n", g);
-
+        printf("Grade %i\n", g);
 }

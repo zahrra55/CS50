@@ -12,14 +12,11 @@ int main(int argc, string argv[])
         return 1; // Return 1 to indicate an error
     }
 
-    else if()
-    {
     string key = argv[1];
     int key_len = strlen(key);
-    }
 
-
-    //if (key_len < 26)    printf("Key must contain 26 characters.\n");
+    if (key_len < 26)
+    printf("Key must contain 26 characters.\n");
 
 
     //printf("%s\n",argv[1]);

@@ -40,7 +40,7 @@ int count_words(string text)
     // Return the number of words in text
     int n = 0;
     for (int i = 0; text[i] != '\0'; i++)
-        if (text[i] >= ' ')
+        if (text[i] >= 32)
         n++;
     return n;
 }

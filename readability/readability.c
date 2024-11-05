@@ -62,9 +62,9 @@ int count_sentences(string text)
 
 void Coleman_Liau(int w, int l, int s)
 {
-    int L = (l / w) * 100;
-    int S = (s / w) * 100;
-    int index = 0.0588 * L - 0.296 * S - 15.8;
+    float L = ((float)l / (float)w) * 100;
+    float S = ((float)s / (float)w) * 100;
+    float index = 0.0588 * L - 0.296 * S - 15.8;
     int g = round(index);
     if (g < 1)
         printf("Before Grade 1\n");

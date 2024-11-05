@@ -16,9 +16,11 @@ int main(int argc, string argv[])
     int key_len = strlen(key);
 
     if (key_len < 26)
-    printf("Key must contain 26 characters.\n");
-    else if(!isalpha(key))
-        
+        printf("Key must contain 26 characters.\n");
+    else
+    for(int i = 0; i < key_len; i++)
+    if(!isalpha(key[i]))
+        printf("Usage: ./substitution key\n");
 
 
     //printf("%s\n",argv[1]);

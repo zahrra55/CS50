@@ -20,9 +20,11 @@ int main(void)
 
     // Compute the Coleman-Liau index
 
+
     // Print the grade level
     printf("the number of letters = %i\n", letters);
     printf("the number of words = %i\n", words);
+    printf("the number of sentences = %i\n", sentences);
 }
 
 int count_letters(string text)
@@ -53,4 +55,11 @@ int count_sentences(string text)
         if (text[i] == '.' || text[i] == '!'|| text[i] == '?')
         n++;
     return n;
+}
+
+int Coleman_Liau(int w, int l, int s)
+{
+    int L = l / w;
+    int S = s /
+    //int index = 0.0588 * L - 0.296 * S - 15.8
 }

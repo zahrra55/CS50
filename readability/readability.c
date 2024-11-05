@@ -62,8 +62,8 @@ int count_sentences(string text)
 
 int Coleman_Liau(int w, int l, int s)
 {
-    int L = l / w;
-    int S = s / w;
+    int L = (l / w) * 100;
+    int S = (s / w) * 100;
     int index = 0.0588 * L - 0.296 * S - 15.8;
     return index;
 }

@@ -6,13 +6,16 @@
 
 int main(int argc, string argv[])
 {
-    string key = argv[1];
-    int key_len = strlen(key);
-
     if (argc != 2)
     {
         printf("Usage: ./substitution key\n");
         return 1; // Return 1 to indicate an error
+    }
+
+    else if()
+    {
+    string key = argv[1];
+    int key_len = strlen(key);
     }
 
 

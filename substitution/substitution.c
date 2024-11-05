@@ -6,5 +6,11 @@
 
 int main(int argc, string argv[])
 {
-    printf("Hello, %s\n",argv[1]);
+    string key = argv[1];
+    int key_len = strlen(key);
+    for(int i = 0; i < key_len; i++)
+    {
+        if (key_len < )
+    }
+    printf("%s\n",argv[1]);
 }

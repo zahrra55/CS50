@@ -50,7 +50,7 @@ int count_sentences(string text)
     // Return the number of sentences in text
     int n = 0;
     for (int i = 0; text[i] != '\0'; i++)
-        if (text[i] == 32)
+        if (text[i] == '.' || text[i] == ','|| text[i] == '\0')
         n++;
-    return 0;
+    return n;
 }

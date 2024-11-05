@@ -39,7 +39,6 @@ int count_words(string text)
 {
     // Return the number of words in text
     int n = 0;
-    // Return the number of letters in text
     for (int i = 0; text[i] != '\0'; i++)
         if (text[i] >= 32 && text[i] <= 47)
         n++;

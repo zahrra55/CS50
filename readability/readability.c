@@ -40,9 +40,9 @@ int count_words(string text)
     // Return the number of words in text
     int n = 0;
     for (int i = 0; text[i] != '\0'; i++)
-        if (text[i] >= 32 && text[i] <= 47)
+        if (text[i] >= 32)
         n++;
-    return n;
+    return n+1;
 }
 
 int count_sentences(string text)

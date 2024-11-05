@@ -17,6 +17,8 @@ int main(int argc, string argv[])
 
     if (key_len < 26)
     printf("Key must contain 26 characters.\n");
+    else if(!isalpha(key))
+        
 
 
     //printf("%s\n",argv[1]);

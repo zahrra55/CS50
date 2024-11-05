@@ -10,7 +10,7 @@ int main(int argc, string argv[])
     int key_len = strlen(key);
     for(int i = 0; i < key_len; i++)
         {
-        if (key[i] == '\0')
+        if (argc != 1)
             printf("Usage: ./substitution key\n");
         }
 

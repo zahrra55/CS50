@@ -43,7 +43,6 @@ int count_words(string text)
         if (text[i] >= 32 && text[i] <= 47)
         n++;
     return n;
-        return 0;
 }
 
 int count_sentences(string text)

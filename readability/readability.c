@@ -65,6 +65,12 @@ void Coleman_Liau(int w, int l, int s)
     int L = (l / w) * 100;
     int S = (s / w) * 100;
     int index = 0.0588 * L - 0.296 * S - 15.8;
-    
+    int g = round(index);
+    if (g < 1)
+        printf("Before Grade 1\n");
+    else if (g > 16)
+        printf("Grade 16+\n");
+    else
+    printf("Grade i%", g);
 
 }

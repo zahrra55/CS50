@@ -63,10 +63,7 @@ bool not_alpha(string key, int len)
 
 void encryption(string plain)
 {
-    string a = "v";
+    for (int i = 0;)
 }
 
-void decryption(string cypher)
-{
-    string a = "v";
-}
+//void decryption(string cypher) { string a = "v";}

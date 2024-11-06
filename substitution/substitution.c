@@ -84,4 +84,3 @@ void encryption(string plain, string key)
 
     printf("ciphertext: %s\n", plain);
 }
-//void decryption(string cypher) { string a = "v";}

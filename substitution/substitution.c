@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     for(int i = 0; i < key_len; i++)
         for (int j = i+1; j < key_len; j++)
             if(key[i] == key[j])
-                printf("Usage: ./substitution key\n");
+                printf("The key should not contain duplicates\n");
 
 
     return 0;

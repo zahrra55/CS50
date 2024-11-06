@@ -19,7 +19,10 @@ int main(int argc, string argv[])
     int key_len = strlen(key);
 
     else if (key_len < 26)
-        printf("Key must contain 26 characters.\n");
+            printf("Key must contain 26 characters.\n");
+
+    else if ()
+            printf("");
 
     else if(duplication(key, key_len))
             printf("");

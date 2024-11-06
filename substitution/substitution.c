@@ -65,7 +65,7 @@ bool not_alpha(string key, int len)
 
 void encryption(string plain, string key)
 {
-    int len = srtlen(plain);
+    int len = strlen(plain);
     int len2 = strlen(key);
     for (int i = 0; i < len; i++)
         if ((isupper(plain[i])) && (plain[i] != '\0'))

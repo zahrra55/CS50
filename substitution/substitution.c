@@ -21,16 +21,19 @@ int main(int argc, string argv[])
     if (key_len != 26)
     {
             printf("Key must contain 26 characters.\n");
+            return 1;
     }
 
     else if (not_alpha(key, key_len))
     {
             printf("Usage: ./substitution key\n");
+            return 1;
     }
 
     else if(duplication(key, key_len))
     {
             printf("the key should not contain duplicates\n");
+            return 1;
     }
 
 

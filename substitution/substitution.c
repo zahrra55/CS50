@@ -38,7 +38,7 @@ int main(int argc, string argv[])
 
     else
     {
-        string plain = get_string("Plaintext : ");
+        string plain = get_string("plaintext: ");
     }
 
     return 0;

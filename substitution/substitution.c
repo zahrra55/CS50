@@ -61,7 +61,7 @@ bool not_alpha(string key, int len)
     return false;
 }
 
-void encryption(string plain)
+void encryption(string plain, string key)
 {
     for (int i = 0, int len = srtlen(plain); i < len; i++)
         if (isupper(plain[i]))

@@ -76,7 +76,8 @@ void encryption(string plain, string key)
 
         if (islower(plain[i]))
         {
-
+            int pos2 = plain[i] - 'a';
+            plain[i] = tolower(key[pos2]);
         }
 
     }

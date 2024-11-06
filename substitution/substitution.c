@@ -43,7 +43,7 @@ bool duplication(string key, int len)
     for(int i = 0; i < len; i++)
         for (int j = i+1; j < len; j++)
             if(key[i] == key[j])
-                return true;
+                return false;
 }
 
 bool not_alpha(string key, int len)
@@ -51,5 +51,5 @@ bool not_alpha(string key, int len)
     for(int i = 0; i < len; i++)
         if(!isalpha(key[i]))
             break;
-            return true;
+            return false;
 }

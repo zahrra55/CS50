@@ -66,6 +66,7 @@ void encryption(string plain, string key)
     for (int i = 0, int len = srtlen(plain); i < len; i++)
         if (isupper(plain[i]))
             for (int j= 0, int len2 = strlen(key);j < len2; j++)
+            
 }
 
 //void decryption(string cypher) { string a = "v";}

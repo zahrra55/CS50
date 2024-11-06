@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     else if (key_len < 26)
             printf("Key must contain 26 characters.\n");
 
-    else if ()
+    else if (not_alpha(key, key_len))
             printf("");
 
     else if(duplication(key, key_len))

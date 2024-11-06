@@ -67,9 +67,20 @@ void encryption(string plain, string key)
 {
 
     for (int i = 0, len = strlen(plain); i < len; i++)
-        if (isupper(plain[i]) == true)
+    {
+        if (isupper(plain[i]))
+        {
             for (int j= 0, len2 = strlen(key); j < len2; j++)
             plain[i] = key[j];
+        }
+
+        if (islower(plain[i]))
+        {
+
+        }
+
+    }
+
     printf("ciphertext: %s\n", plain);
 }
 //void decryption(string cypher) { string a = "v";}

@@ -17,20 +17,26 @@ int main(int argc, string argv[])
 
     if (key_len < 26)
         printf("Key must contain 26 characters.\n");
-    else
-    {
+
+
+
+
+
+    return 0;
+}
+
+bool duplication(string txt)
+{
+    for(int i = 0; i < key_len; i++)
+        for (int j = i+1; j < key_len; j++)
+            if(key[i] == key[j])
+                return true;
+}
+
+bool alpha(string txt)
+{
     for(int i = 0; i < key_len; i++)
         if(!isalpha(key[i]))
             break;
             printf("Usage: ./substitution key\n");
-    }
-
-
-    for(int i = 0; i < key_len; i++)
-        for (int j = i+1; j < key_len; j++)
-            if(key[i] == key[j])
-                printf("The key should not contain duplicates\n");
-
-
-    return 0;
 }

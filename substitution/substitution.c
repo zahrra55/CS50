@@ -20,6 +20,7 @@ int main(int argc, string argv[])
     else
     for(int i = 0; i < key_len; i++)
         if(!isalpha(key[i]))
+            break;
             printf("Usage: ./substitution key\n");
 
     for(int i = 0; i < key_len; i++)

@@ -6,6 +6,7 @@
 
 bool duplication(string key, int len);
 bool not_alpha(string key, int len);
+void encryption(string plain, string key);
 
 int main(int argc, string argv[])
 {
@@ -39,6 +40,7 @@ int main(int argc, string argv[])
     else
     {
         string plain = get_string("plaintext: ");
+        encryption(plain, key);
     }
 
     return 0;
@@ -64,9 +66,10 @@ bool not_alpha(string key, int len)
 void encryption(string plain, string key)
 {
     for (int i = 0, int len = srtlen(plain); i < len; i++)
-        if (isupper(plain[i]))
+        if ((isupper(plain[i])) && (plain[i] != '\0'))
             for (int j= 0, int len2 = strlen(key);j < len2; j++)
-            
+            plain[i] = key[j];
+    printf("ciphertext: %s\n", plain);
 }
 
 //void decryption(string cypher) { string a = "v";}

@@ -33,10 +33,10 @@ bool duplication(string key, int len)
                 return true;
 }
 
-bool alpha(string key, int len)
+bool not_alpha(string key, int len)
 {
     for(int i = 0; i < len; i++)
         if(!isalpha(key[i]))
             break;
-            printf("Usage: ./substitution key\n");
+            return true;
 }

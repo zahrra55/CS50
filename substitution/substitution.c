@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include <string.h>
 
+bool duplication(string key, int len);
+bool not_alpha(string key, int len);
+
 int main(int argc, string argv[])
 {
     if (argc != 2)

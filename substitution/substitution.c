@@ -36,7 +36,10 @@ int main(int argc, string argv[])
             return 1;
     }
 
-
+    else
+    {
+        string plain = get_string("Plaintext : ");
+    }
 
     return 0;
 }

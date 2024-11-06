@@ -60,3 +60,5 @@ bool not_alpha(string key, int len)
             return true;
     return false;
 }
+
+void encryption 

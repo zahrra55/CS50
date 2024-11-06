@@ -70,8 +70,8 @@ void encryption(string plain, string key)
     {
         if (isupper(plain[i]))
         {
-            for (int j= 0, len2 = strlen(key); j < len2; j++)
-            plain[i] = key[j];
+            int pos = plain[i] - 'A';
+            plain[i] = toupper(key[pos]);
         }
 
         if (islower(plain[i]))

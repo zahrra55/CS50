@@ -26,7 +26,7 @@ int main(int argc, string argv[])
 
     else if (not_alpha(key, key_len))
     {
-            printf("Usage: ./substitution key\n");
+            printf("Key must only contain alphabetic characters.\n");
             return 1;
     }
 
@@ -46,7 +46,8 @@ bool duplication(string key, int len)
     for(int i = 0; i < len; i++)
         for (int j = i+1; j < len; j++)
             if(key[i] == key[j])
-                return false;
+                return true;
+    return false;
 }
 
 bool not_alpha(string key, int len)

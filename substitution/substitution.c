@@ -55,5 +55,5 @@ bool not_alpha(string key, int len)
     for(int i = 0; i < len; i++)
         if(!isalpha(key[i]))
             return true;
-            return false;
+    return false;
 }

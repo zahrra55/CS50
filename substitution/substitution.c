@@ -21,20 +21,20 @@ int main(int argc, string argv[])
 
     if (key_len != 26)
     {
-            printf("Key must contain 26 characters.\n");
-            return 1;
+        printf("Key must contain 26 characters.\n");
+        return 1;
     }
 
     else if (not_alpha(key, key_len))
     {
-            printf("Key must only contain alphabetic characters.\n");
-            return 1;
+        printf("Key must only contain alphabetic characters.\n");
+        return 1;
     }
 
-    else if(duplication(key, key_len))
+    else if (duplication(key, key_len))
     {
-            printf("the key should not contain duplicates\n");
-            return 1;
+        printf("the key should not contain duplicates\n");
+        return 1;
     }
 
     else
@@ -48,17 +48,17 @@ int main(int argc, string argv[])
 
 bool duplication(string key, int len)
 {
-    for(int i = 0; i < len; i++)
-        for (int j = i+1; j < len; j++)
-            if(key[i] == key[j])
+    for (int i = 0; i < len; i++)
+        for (int j = i + 1; j < len; j++)
+            if (key[i] == key[j])
                 return true;
     return false;
 }
 
 bool not_alpha(string key, int len)
 {
-    for(int i = 0; i < len; i++)
-        if(!isalpha(key[i]))
+    for (int i = 0; i < len; i++)
+        if (!isalpha(key[i]))
             return true;
     return false;
 }
@@ -79,7 +79,6 @@ void encryption(string plain, string key)
             int pos2 = plain[i] - 'a';
             plain[i] = tolower(key[pos2]);
         }
-
     }
 
     printf("ciphertext: %s\n", plain);

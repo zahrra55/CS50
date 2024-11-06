@@ -63,8 +63,9 @@ bool not_alpha(string key, int len)
 
 void encryption(string plain)
 {
-    int 
-    for (int i = 0;)
+    for (int i = 0, int len = srtlen(plain); i < len; i++)
+        if (isupper(plain[i]))
+            
 }
 
 //void decryption(string cypher) { string a = "v";}

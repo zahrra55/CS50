@@ -65,11 +65,10 @@ bool not_alpha(string key, int len)
 
 void encryption(string plain, string key)
 {
-    int len = strlen(plain);
-    int len2 = strlen(key);
-    for (int i = 0; i < len; i++)
+
+    for (int i = 0, len = strlen(plain); i < len; i++)
         if ((isupper(plain[i])) && (plain[i] != '\0'))
-            for (int j= 0; j < len2; j++)
+            for (int j= 0, len2 = strlen(key); j < len2; j++)
             plain[i] = key[j];
     printf("ciphertext: %s\n", plain);
 }

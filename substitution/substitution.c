@@ -22,10 +22,10 @@ int main(int argc, string argv[])
             printf("Key must contain 26 characters.\n");
 
     else if (not_alpha(key, key_len))
-            printf("");
+            printf("Usage: ./substitution key\n");
 
     else if(duplication(key, key_len))
-            printf("");
+            printf("the key should not contain duplicates\n");
 
 
 

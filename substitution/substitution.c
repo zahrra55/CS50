@@ -18,10 +18,13 @@ int main(int argc, string argv[])
     if (key_len < 26)
         printf("Key must contain 26 characters.\n");
     else
+    {
     for(int i = 0; i < key_len; i++)
         if(!isalpha(key[i]))
             break;
             printf("Usage: ./substitution key\n");
+    }
+
 
     for(int i = 0; i < key_len; i++)
         for (int j = i+1; j < key_len; j++)

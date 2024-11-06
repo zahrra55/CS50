@@ -63,7 +63,7 @@ bool not_alpha(string key, int len)
 
 void encryption(string plain)
 {
-    
+    int 
     for (int i = 0;)
 }
 

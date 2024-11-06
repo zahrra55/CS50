@@ -22,7 +22,5 @@ int main(int argc, string argv[])
     if(!isalpha(key[i]))
         printf("Usage: ./substitution key\n");
 
-
-    //printf("%s\n",argv[1]);
     return 0;
 }

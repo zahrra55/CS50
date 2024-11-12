@@ -1,6 +1,6 @@
 sort1 uses: TODO
 
-How do you know?: TODO
+How do you know?: Takes 
 
 sort2 uses: TODO
 

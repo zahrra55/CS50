@@ -1,16 +1,16 @@
-sort1 uses: TODO
+sort1 uses: Merge sort
 
 How do you know?: Takes 0m0.068s to sort sorted5000 and 0m0.058s to sort random5000 and 0m0.079s to sort reversed5000.
                   Takes 0m0.072s to sort sorted10000 and 0m0.191s to sort random10000 and 0m0.228s to sort reversed10000
                   Takes 0m1.325s to sort sorted50000 and 0m10.787s to sort random50000 and 0m5.646s to sort reversed50000
 
-sort2 uses: TODO
+sort2 uses: Bubble sort
 
 How do you know?: Takes 0m0.028s to sort sorted5000 and 0m0.106s to sort random5000 and 0m0.031s to sort reversed5000.
                   Takes 0m0.769s to sort sorted10000 and 0m0.062s to sort random10000 and 0m0.065s to sort reversed10000
                   Takes 0m2.809s to sort sorted50000 and 0m4.281s to sort random50000 and 0m3.019s to sort reversed50000
 
-sort3 uses: TODO
+sort3 uses: Selection sort
 
 How do you know?: Takes 0m0.058s to sort sorted5000 and 0m0.045s to sort random5000 and 0m0.046s to sort reversed5000.
                   Takes 0m0.127s to sort sorted10000 and 0m0.172s to sort random10000 and 0m0.179s to sort reversed10000

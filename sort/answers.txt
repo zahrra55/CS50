@@ -1,6 +1,8 @@
 sort1 uses: TODO
 
-How do you know?: Takes 0m0.068s to sort sorted5000 and 0m0.058s to sort random5000 and 0m0.079s to sort reversed5000
+How do you know?: Takes 0m0.068s to sort sorted5000 and 0m0.058s to sort random5000 and 0m0.079s to sort reversed5000.
+                  Takes 0m0.072s to sort sorted10000 and 0m0.058s to sort random5000 and 0m0.079s to sort reversed5000
+                  Takes 0m0.068s to sort sorted5000 and 0m0.058s to sort random5000 and 0m0.079s to sort reversed5000
 
 sort2 uses: TODO
 

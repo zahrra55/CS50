@@ -51,8 +51,10 @@ int main(int argc, string argv[])
     {
         string name = get_string("Vote: ");
 
+        if (name == candidates[i].name)
+            candidates[i].votes++;
         // Check for invalid vote
-        if (!vote(name))
+        else if (!vote(name))
         {
             printf("Invalid vote.\n");
         }

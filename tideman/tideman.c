@@ -1,12 +1,9 @@
 #include <cs50.h>
 #include <stdio.h>
-
 // Max number of candidates
 #define MAX 9
-
 // preferences[i][j] is number of voters who prefer i over j
 int preferences[MAX][MAX];
-
 // locked[i][j] means i is locked in over j
 bool locked[MAX][MAX];
 

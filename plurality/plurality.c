@@ -44,7 +44,7 @@ int main(int argc, string argv[])
         candidates[i].votes = 0;
     }
 
-    int voter_count = get_int("Number of voters: ");
+    voter_count = get_int("Number of voters: ");
 
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
@@ -68,7 +68,7 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    for (int i = 0; i < Max; i++)
+    for (int i = 0; i < voter_count; i++)
         if (strcmp(name, candidates[i].name) == 0)
             return true;
     return false;
@@ -78,7 +78,10 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    for (int i = 0; i < )
+    int winner = 0;
+    for (int i = 0; i < voter_count; i++)
+        if (candidates[i].name > winner)
+        winner ==
     printf("The winner is %s",)
     return;
 }

@@ -80,8 +80,8 @@ void print_winner(void)
     // TODO
     int winner = 0;
     for (int i = 0; i < voter_count; i++)
-        if (candidates[i].name > winner)
-        winner ==
+        if (candidates[i].votes > winner)
+        winner = candidates[i].votes;
     printf("The winner is %s",)
     return;
 }

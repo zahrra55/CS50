@@ -4,7 +4,7 @@
 
 // Max number of candidates
 #define MAX 9
-
+int voter_count;
 // Candidates have name and vote count
 typedef struct
 {

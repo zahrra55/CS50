@@ -53,6 +53,7 @@ int main(int argc, string argv[])
 
         if (name == candidates[i].name)
             candidates[i].votes++;
+        if ()
         // Check for invalid vote
         else if (!vote(name))
         {
@@ -77,6 +78,6 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    printf("The winner ")
+    printf("The winner is %s",)
     return;
 }

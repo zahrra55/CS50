@@ -51,9 +51,6 @@ int main(int argc, string argv[])
     {
         string name = get_string("Vote: ");
 
-       // if (strcmp(name, candidates[i].name) == 0)
-            //candidates[i].votes++;
-
         // Check for invalid vote
         if (!vote(name))
         {
@@ -70,7 +67,11 @@ bool vote(string name)
     // TODO
     for (int i = 0; i < candidate_count; i++)
         if (strcmp(name, candidates[i].name) == 0)
+        {
+            candidates[i].votes++;
             return true;
+        }
+
     return false;
 }
 

@@ -85,6 +85,7 @@ void print_winner(void)
     {
         if (candidates[i].votes > winner_votes)
             winner_votes = candidates[i].votes;
+            
         if (candidates[i].votes == winner_votes)
             winner_name = candidates[i].name;
     }

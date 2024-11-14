@@ -100,7 +100,8 @@ bool vote(int rank, string name, int ranks[])
 {
     // TODO
     for (int i = 0;i < candidate_count; i++)
-        if ( )
+        if (cmpstr(candidates[i], name) == 0)
+        return true;
     return false;
 }
 

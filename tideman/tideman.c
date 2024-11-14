@@ -99,6 +99,7 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     // TODO
+    if (rank > )
     return false;
 }
 

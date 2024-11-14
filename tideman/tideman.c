@@ -116,7 +116,7 @@ void record_preferences(int ranks[])
     // TODO
     for (int i = 0; i < candidate_count; i++)
         for (int j = i + 1; j < candidate_count; j++)
-            if (ranks[i] > ranks[j])
+           // if (ranks[i] > ranks[j])
                 preferences[ranks[i]][ranks[j]]++;
 
     return;
@@ -126,6 +126,9 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
+     for (int i = 0; i < candidate_count; i++)
+        for (int j = i + 1; j < candidate_count; j++)
+            if (ranks[i] > ranks[j])
     return;
 }
 

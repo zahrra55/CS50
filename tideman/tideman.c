@@ -128,7 +128,7 @@ void add_pairs(void)
     // TODO
      for (int i = 0; i < candidate_count; i++)
         for (int j = i + 1; j < candidate_count; j++)
-            if (ranks[i] > ranks[j])
+            preferences[i][j];
     return;
 }
 

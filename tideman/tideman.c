@@ -128,7 +128,10 @@ void add_pairs(void)
     // TODO
      for (int i = 0; i < candidate_count; i++)
         for (int j = i + 1; j < candidate_count; j++)
-            preferences[i][j];
+            if (preferences[i][j] > preferences[j][i])
+            {
+                preferences[i][j].winner = 
+            }
     return;
 }
 

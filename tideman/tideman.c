@@ -144,8 +144,14 @@ void sort_pairs(void)
     for (int i = 0; i < pair_count - 1; i++)
         for (int j = 0; j < pair_count - i - 1; j++)
         {
-            int S1 = preferences[pair[j].winner][pair[j].loser] - preferences[pair[j].loser][pair[j].winner];
-            int S2 = preferences[pair[j].winner][pair[j].loser] - preferences[pair[j].loser][pair[j].winner];
+            int S1 = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
+            int S2 = preferences[pairs[j + 1].winner][pairs[j + 1].loser] - preferences[pairs[j].loser][pairs[j].winner];
+            if (S2 > S1)
+                {
+                    pair temp = pairs[j];
+                    pairs[j] = pairs[j + 1];
+                    pairs[j + 1] = temp;
+                }
 
         }
     return;

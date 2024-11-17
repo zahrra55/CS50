@@ -173,5 +173,5 @@ void print_winner(void)
 
 bool cycle()
 {
-    hello;
+    return true;
 }

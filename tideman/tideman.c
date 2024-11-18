@@ -183,16 +183,20 @@ bool cycle(int st, int candt)
 void print_winner(void)
 {
     // TODO
-    bool x = true;
+
     for (int i = 0; i < candidate_count; i++)
+    {
+        bool x = true;
         for (int j = 0; j < candidate_count; j++)
-        if (locked[i][j])
+            if (locked[i][j])
             {
                 x = false;
                 break;
             }
-        if (x)
+            if (x)
             printf("the winner is : %s\n", candidates[i])
+
+    }
 
     return;
 }

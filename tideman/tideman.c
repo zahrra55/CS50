@@ -174,7 +174,10 @@ bool cycle(int st, int candt)
         return true;
 
     for (int i = 0; i < candidate_count; i++)
-        if (candidates[i])
+        if (locked[candidate][i] && cycle(st, i))
+            return true;
+    else
+        return false;
 }
 
 // Print the winner of the election

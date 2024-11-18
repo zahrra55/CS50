@@ -161,6 +161,7 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
+    
     return;
 }
 

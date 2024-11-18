@@ -174,7 +174,7 @@ bool cycle(int st, int candt)
         return true;
 
     for (int i = 0; i < candidate_count; i++)
-        if (locked[candidate][i] && cycle(st, i))
+        if (locked[candt][i] && cycle(st, i))
             return true;
     return false;
 }
@@ -189,9 +189,9 @@ void print_winner(void)
         if (locked[i][j])
             {
                 x = false;
-                return 2;
+                break;
             }
-        if (x == true)
+        if (x)
             printf("the winner is : %s\n", candidates[i])
 
     return;

@@ -132,6 +132,8 @@ void add_pairs(void)
                 pairs[pair_count].loser = j;
                 pair_count++;
             }
+            //if (preferences[i][j] == preferences[j][i])
+                //return;
     return;
 }
 

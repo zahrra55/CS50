@@ -170,8 +170,11 @@ void lock_pairs(void)
 
 bool cycle(int st, int candt)
 {
-    if ()
-    return true;
+    if (candt == st)
+        return true;
+
+    for (int i = 0; i < candidate_count; i++)
+        if (candidates[i])
 }
 
 // Print the winner of the election

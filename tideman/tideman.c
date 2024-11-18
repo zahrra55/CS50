@@ -168,8 +168,9 @@ void lock_pairs(void)
     return;
 }
 
-bool cycle(int x, int y)
+bool cycle(int st, int candt)
 {
+    if ()
     return true;
 }
 

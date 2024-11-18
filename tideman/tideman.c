@@ -189,11 +189,14 @@ void print_winner(void)
     {
         bool x = true;
         for (int j = 0; j < candidate_count; j++)
-            if (locked[i][j])
+        {
+           if (locked[j][i])
             {
                 x = false;
                 break;
             }
+        }
+
             if (x)
             {
                 printf("the winner is : %s\n", candidates[i])

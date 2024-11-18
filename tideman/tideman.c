@@ -101,7 +101,7 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     // TODO
-    for (int i = 0;i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
         if (strcmp(candidates[i], name) == 0)
         {
             ranks[rank] = i;
@@ -117,14 +117,14 @@ void record_preferences(int ranks[])
     // TODO
     for (int i = 0; i < candidate_count; i++)
         for (int j = i + 1; j < candidate_count; j++)
-                preferences[ranks[i]][ranks[j]]++;
+            preferences[ranks[i]][ranks[j]]++;
 }
 
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
     // TODO
-     for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
         for (int j = i + 1; j < candidate_count; j++)
         {
             if (preferences[i][j] > preferences[j][i])
@@ -134,13 +134,12 @@ void add_pairs(void)
                 pair_count++;
             }
             else if (preferences[i][j] < preferences[j][i])
-                {
-                    pairs[pair_count].winner = j;
-                    pairs[pair_count].loser = i;
-                    pair_count++;
-                }
-                // Ignore ties (preferences[i][j] == preferences[j][i])
-
+            {
+                pairs[pair_count].winner = j;
+                pairs[pair_count].loser = i;
+                pair_count++;
+            }
+            // Ignore ties (preferences[i][j] == preferences[j][i])
         }
 
     return;
@@ -153,18 +152,19 @@ void sort_pairs(void)
     for (int i = 0; i < pair_count - 1; i++)
         for (int j = 0; j < pair_count - i - 1; j++)
         {
-            //int S1 = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
-            //int S2 = preferences[pairs[j + 1].winner][pairs[j + 1].loser] - preferences[pairs[j + 1].loser][pairs[j + 1].winner];
+            // int S1 = preferences[pairs[j].winner][pairs[j].loser] -
+            // preferences[pairs[j].loser][pairs[j].winner];
+            // int S2 = preferences[pairs[j +
+             1].winner][pairs[j + 1].loser] - preferences[pairs[j + 1].loser][pairs[j + 1].winner];
             int S1 = preferences[pairs[j].winner][pairs[j].loser];
             int S2 = preferences[pairs[j + 1].winner][pairs[j + 1].loser];
 
             if (S2 > S1)
-                {
-                    pair temp = pairs[j];
-                    pairs[j] = pairs[j + 1];
-                    pairs[j + 1] = temp;
-                }
-
+            {
+                pair temp = pairs[j];
+                pairs[j] = pairs[j + 1];
+                pairs[j + 1] = temp;
+            }
         }
     return;
 }
@@ -174,8 +174,8 @@ void lock_pairs(void)
 {
     // TODO
     for (int i = 0; i < pair_count; i++)
-    if (!cycle(pairs[i].winner,pairs[i].loser))
-        locked[pairs[i].winner][pairs[i].loser] = true;
+        if (!cycle(pairs[i].winner, pairs[i].loser))
+            locked[pairs[i].winner][pairs[i].loser] = true;
     return;
 }
 
@@ -201,18 +201,17 @@ void print_winner(void)
         bool x = true;
         for (int j = 0; j < candidate_count; j++)
         {
-           if (locked[j][i])
+            if (locked[j][i])
             {
                 x = false;
                 break;
             }
         }
 
-            if (x)
-            {
-                printf("%s\n", candidates[i]);
-                return;
-            }
-
+        if (x)
+        {
+            printf("%s\n", candidates[i]);
+            return;
+        }
     }
 }

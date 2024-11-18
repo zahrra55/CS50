@@ -180,7 +180,7 @@ bool cycle(int st, int candt)
 }
 
 // Print the winner of the election
-void print_winner(void)
+/**/void print_winner(void)
 {
     // TODO
 
@@ -194,10 +194,11 @@ void print_winner(void)
                 break;
             }
             if (x)
-            printf("the winner is : %s\n", candidates[i])
+            {
+                printf("the winner is : %s\n", candidates[i])
+                return;
+            }
 
     }
-
-    return;
 }
 

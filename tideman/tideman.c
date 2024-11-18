@@ -139,6 +139,7 @@ void add_pairs(void)
                     pairs[pair_count].loser = i;
                     pair_count++;
                 }
+                // Ignore ties (preferences[i][j] == preferences[j][i])
 
         }
 

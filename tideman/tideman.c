@@ -161,8 +161,13 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
-    
+
     return;
+}
+
+bool cycle()
+{
+    return true;
 }
 
 // Print the winner of the election
@@ -172,7 +177,3 @@ void print_winner(void)
     return;
 }
 
-bool cycle()
-{
-    return true;
-}

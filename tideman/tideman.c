@@ -152,12 +152,12 @@ void sort_pairs(void)
     for (int i = 0; i < pair_count - 1; i++)
         for (int j = 0; j < pair_count - i - 1; j++)
         {
-            // int S1 = preferences[pairs[j].winner][pairs[j].loser] -
-            // preferences[pairs[j].loser][pairs[j].winner];
-            // int S2 = preferences[pairs[j +
-             1].winner][pairs[j + 1].loser] - preferences[pairs[j + 1].loser][pairs[j + 1].winner];
-            int S1 = preferences[pairs[j].winner][pairs[j].loser];
-            int S2 = preferences[pairs[j + 1].winner][pairs[j + 1].loser];
+            int S1 = preferences[pairs[j].winner][pairs[j].loser] -
+            preferences[pairs[j].loser][pairs[j].winner];
+            int S2 = preferences[pairs[j +
+            1].winner][pairs[j + 1].loser] - preferences[pairs[j + 1].loser][pairs[j + 1].winner];
+            //int S1 = preferences[pairs[j].winner][pairs[j].loser];
+            //int S2 = preferences[pairs[j + 1].winner][pairs[j + 1].loser];
 
             if (S2 > S1)
             {

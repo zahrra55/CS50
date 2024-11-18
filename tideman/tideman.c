@@ -31,6 +31,7 @@ void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
+bool cycle(int x, int y);
 void print_winner(void);
 
 int main(int argc, string argv[])
@@ -161,11 +162,13 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
-    
+    for (int i = 0; i < pair_count; i++)
+    if (!cycle(pairs[i].winner,pairs[i].loser))
+        loked
     return;
 }
 
-bool cycle()
+bool cycle(int x, int y)
 {
     return true;
 }

@@ -199,7 +199,7 @@ void print_winner(void)
 
             if (x)
             {
-                printf("the winner is : %s\n", candidates[i]);
+                printf("%s\n", candidates[i]);
                 return;
             }
 

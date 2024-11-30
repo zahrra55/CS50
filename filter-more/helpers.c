@@ -20,7 +20,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             if (i > half)
-            image[i][j] = image[i - (half + 1)][j];
+            image[i][j] = image[(half + 1) - i][j];
+            else if (i < half)
+            image[i][j] = image[(half + 1) + i][j];
+            else
+            image[i][j] = image[i][j];
         }
     return;
 }

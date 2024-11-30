@@ -43,7 +43,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
         }
     RGBTRIPLE temp[height][width];
-        temp[i][j] = temp[i][j] + image[nei][nej].rgbtRed
+        temp[i][j].rgbtRed = 
 
 
     for (int i = 0; i < height; i++)

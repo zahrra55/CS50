@@ -41,11 +41,11 @@ int main(int argc, char *argv[])
 
 
     // TODO: Read samples from input file and write updated data to output file
-    BYTE t;
-    while (fread(&t,1,2,input) !=0)
+    BYTE buffer;
+    while (fread(&buffer,1,2,input) !=0)
     {
-        t *= factor;
-        fwrite(&t,1,2,output);
+        buffer *= factor;
+        fwrite(&buffer,1,2,output);
     }
     // Close files
     fclose(input);

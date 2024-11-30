@@ -3,7 +3,13 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    return;
+    for (int i = 0; i < height; i++)
+        for (int j = 0; j < width; j++)
+        {
+            double avarage = (image[i][j].)
+            return;
+        }
+
 }
 
 // Reflect image horizontally

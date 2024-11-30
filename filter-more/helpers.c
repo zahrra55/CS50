@@ -6,7 +6,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < height; i++)
         for (int j = 0; j < width; j++)
         {
-            double avarage = (image[i][j].)
+            double avarage = (image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3.0;
             return;
         }
 

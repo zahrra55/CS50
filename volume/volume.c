@@ -36,14 +36,12 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     BYTE t;
-    while ((fread(output,HEADER_SIZE,1,input)) != 0)
-    {
+    fread(output,HEADER_SIZE,1,input)
         fwrite(output,HEADER_SIZE,1,input);
-    }
 
 
     // TODO: Read samples from input file and write updated data to output file
-    
+
 
     // Close files
     fclose(input);

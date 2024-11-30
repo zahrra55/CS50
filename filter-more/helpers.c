@@ -10,8 +10,6 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtRed = image[i][j].rgbtGreen = image[i][j].rgbtBlue = avarage;
         }
 
-        return;
-
 }
 
 // Reflect image horizontally

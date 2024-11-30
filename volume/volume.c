@@ -35,9 +35,10 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // TODO: Copy header from input file to output file
-    while ((fread(output,HEADER_SIZE,1,input)) != 0)
+    BYTE t;
+    while ((fread(&t,HEADER_SIZE,1,input)) != 0)
     {
-        fwrite(output,HEADER_SIZE,1,input);
+        fwrite(&t,HEADER_SIZE,1,outo);
     }
 
 

@@ -26,7 +26,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             else
             image[i][j] = image[i][j];
         }
-    return;
 }
 
 // Blur image

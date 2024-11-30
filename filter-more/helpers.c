@@ -29,26 +29,31 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     int sumRed = 0, sumGreen = 0, sumBlue = 0, count = 0;
 
-    for (int ni = -1; ni < 2; ni++)
-    {
-        for(int nj = -1; nj < 2; nj++)
+    for (int i = 0; i < height; i++)
+        for (int j = 0; j < width; j++)
         {
-            int nei = i + ni;
-            int nej = j + nj;
-        if(nei >= 0 && nei < height && nej >= 0 && nei < width)
+        for (int ni = -1; ni < 2; ni++)
+        {
+            for(int nj = -1; nj < 2; nj++)
             {
+                int nei = i + ni;
+                int nej = j + nj;
+                if(nei >= 0 && nei < height && nej >= 0 && nei < width)
+                {
                 sumRed += image[nei][nej].rgbtRed;
                 sumGreen += image[nei][nej].rgbtGreen;
                 sumBlue += image[nei][nej].rgbtBlue;
                 count++;
+                }
             }
-        }
     RGBTRIPLE temp[height][width];
         temp[i][j].rgbtRed = round((float)sumRed / count);
         temp[i][j].rgbtGreen = round((float)sumGreen / count);
         temp[i][j].rgbtBlue = round((float)sumBlue / count);
 
-    }
+        }
+
+        }
 
     for (int i = 0; i < height; i++)
         for (int j = 0; j < width; j++)

@@ -26,40 +26,52 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // Blur image
+#include <math.h> // Include the math library
+
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     int sumRed = 0, sumGreen = 0, sumBlue = 0, count = 0;
     RGBTRIPLE temp[height][width];
+
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
+            sumRed = sumGreen = sumBlue = count = 0; // Reset sums for each pixel
+
             for (int ni = -1; ni < 2; ni++)
             {
-                 for(int nj = -1; nj < 2; nj++)
-                 {
+                for (int nj = -1; nj < 2; nj++)
+                {
                     int nei = i + ni;
                     int nej = j + nj;
-                    if(nei >= 0 && nei < height && nej >= 0 && nei < width)
+
+                    // Check if neighbor pixel is valid
+                    if (nei >= 0 && nei < height && nej >= 0 && nej < width)
                     {
-                    sumRed += image[nei][nej].rgbtRed;
-                    sumGreen += image[nei][nej].rgbtGreen;
-                    sumBlue += image[nei][nej].rgbtBlue;
-                    count++;
+                        sumRed += image[nei][nej].rgbtRed;
+                        sumGreen += image[nei][nej].rgbtGreen;
+                        sumBlue += image[nei][nej].rgbtBlue;
+                        count++;
                     }
-                 }
+                }
             }
+
+            // Calculate the average and assign to temp
             temp[i][j].rgbtRed = round((float)sumRed / count);
             temp[i][j].rgbtGreen = round((float)sumGreen / count);
             temp[i][j].rgbtBlue = round((float)sumBlue / count);
         }
     }
-for (int i = 0; i < height; i++)
+
+    // Copy the blurred image back to the original
+    for (int i = 0; i < height; i++)
+    {
         for (int j = 0; j < width; j++)
         {
             image[i][j] = temp[i][j];
         }
-
+    }
 }
 
 // Detect edges

@@ -102,13 +102,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         int WX = Gx[ni + 1][nj + 1];
                         int WY = Gy[ni + 1][nj + 1];
 
-                        sumRedx += image[nei][nej].rgbtRed;
-                        sumGreenx += image[nei][nej].rgbtGreen;
-                        sumBluex += image[nei][nej].rgbtBlue;
+                        sumRedx += image[nei][nej].rgbtRed * WX;
+                        sumGreenx += image[nei][nej].rgbtGreen * WX;
+                        sumBluex += image[nei][nej].rgbtBlue * WX;
 
-                        sumRedy += image[nei][nej].rgbtRed;
-                        sumGreeny += image[nei][nej].rgbtGreen;
-                        sumBluey += image[nei][nej].rgbtBlue;
+                        sumRedy += image[nei][nej].rgbtRed * WY;
+                        sumGreeny += image[nei][nej].rgbtGreen * WY;
+                        sumBluey += image[nei][nej].rgbtBlue * WY;
 
                     }
                 }
@@ -119,23 +119,18 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int Blue = round(sqrt(sumBluex * sumBluex + sumBluey * sumBluey));
 
 
-            // Calculate the average and assign to temp
-            if (Red > 255)
-                temp[i][j].rgbtRed = 255;
+            if (Red > 255) temp[i][j].rgbtRed = 255;
             else temp[i][j].rgbtRed = Red;
 
-            if (Green > 255)
-                temp[i][j].rgbtGreen = 255;
+            if (Green > 255) temp[i][j].rgbtGreen = 255;
             else temp[i][j].rgbtGreen = Green;
 
-            if (Blue > 255)
-                temp[i][j].rgbtBlue = 255;
+            if (Blue > 255) temp[i][j].rgbtBlue = 255;
             else temp[i][j].rgbtBlue = Blue;
 
         }
     }
 
-    // Copy the blurred image back to the original
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)

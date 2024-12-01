@@ -121,12 +121,16 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             // Calculate the average and assign to temp
             if (Red > 255)
-                Red = 255;
-            else Red = Red;
+                temp[i][j].rgbtRed = 255;
+            else temp[i][j].rgbtRed = Red;
 
-            temp[i][j].rgbtRed = round((float)sumRed / count);
-            temp[i][j].rgbtGreen = round((float)sumGreen / count);
-            temp[i][j].rgbtBlue = round((float)sumBlue / count);
+            if (Green > 255)
+                temp[i][j].rgbtGreen = 255;
+            else temp[i][j].rgbtGreen = G;
+
+            if (Blue > 255)
+                temp[i][j].rgbtBlue = 255;
+            else temp[i][j].rgbtBlue = Red;
 
         }
     }

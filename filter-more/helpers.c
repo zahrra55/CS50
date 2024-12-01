@@ -114,9 +114,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            //temp[i][j].rgbtRed *= Gx;
-            //temp[i][j].rgbtGreen *= Gx;
-            //temp[i][j].rgbtBlue *= Gx;
+            int Red = round(sqrt(sumRedx * sumRedx + sumRedy * sumRedy));
 
             // Calculate the average and assign to temp
             temp[i][j].rgbtRed = round((float)sumRed / count);

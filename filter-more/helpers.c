@@ -76,7 +76,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     int Gx[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
     int Gy[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
-
+    int sumRed, sumGreen, sumBlue, count;
 
     RGBTRIPLE temp[height][width];
 
@@ -84,7 +84,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            //sumRed = sumGreen = sumBlue = count = 0; // Reset sums for each pixel
+            sumRed = sumGreen = sumBlue = count = 0; // Reset sums for each pixel
 
             for (int ni = -1; ni < 2; ni++)
             {
@@ -105,9 +105,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Calculate the average and assign to temp
-            temp[i][j].rgbtRed = round((float)sumRed / count);
-            temp[i][j].rgbtGreen = round((float)sumGreen / count);
-            temp[i][j].rgbtBlue = round((float)sumBlue / count);
+            //temp[i][j].rgbtRed = round((float)sumRed / count);
+            //temp[i][j].rgbtGreen = round((float)sumGreen / count);
+            //temp[i][j].rgbtBlue = round((float)sumBlue / count);
+            
         }
     }
 

@@ -86,7 +86,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            sumRed = sumGreen = sumBlue = count = 0; // Reset sums for each pixel
+            sumRedx = sumGreenx = sumBluex = 0; // Reset X's sums for each pixel
+            sumRedy = sumGreeny = sumBluey = 0; // Reset Y's sums for each pixel
 
             for (int ni = -1; ni < 2; ni++)
             {
@@ -98,10 +99,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     // Check if neighbor pixel is valid
                     if (nei >= 0 && nei < height && nej >= 0 && nej < width)
                     {
-                        sumRed += image[nei][nej].rgbtRed;
-                        sumGreen += image[nei][nej].rgbtGreen;
-                        sumBlue += image[nei][nej].rgbtBlue;
-                        count++;
+                        sumRedx += image[nei][nej].rgbtRed;
+                        sumGreenx += image[nei][nej].rgbtGreen;
+                        sumBluex += image[nei][nej].rgbtBlue;
+
+                        sumRedy += image[nei][nej].rgbtRed;
+                        sumGreeny += image[nei][nej].rgbtGreen;
+                        sumBluey += image[nei][nej].rgbtBlue;
+
                     }
                 }
             }

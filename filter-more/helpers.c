@@ -25,9 +25,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         }
 }
 
-// Blur image
-#include <math.h> // Include the math library
-
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     int sumRed = 0, sumGreen = 0, sumBlue = 0, count = 0;

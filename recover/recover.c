@@ -3,6 +3,9 @@
 
 int main(int argc, char *argv[])
 {
-    //TODO:open memory card
-    //TO
+    //TODO: Open memory card
+    //TODO: Look for a begining for JPEG
+    //TODO: Open a new JPEG file
+    //TODO: Write 512 bytes until a new JPEG is found
+    //TODO: Stop at end of file
 }

@@ -27,7 +27,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    int sumRed = 0, sumGreen = 0, sumBlue = 0, count = 0;
+    int sumRed, sumGreen, sumBlue, count;
     RGBTRIPLE temp[height][width];
 
     for (int i = 0; i < height; i++)

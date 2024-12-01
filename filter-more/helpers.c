@@ -99,7 +99,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     // Check if neighbor pixel is valid
                     if (nei >= 0 && nei < height && nej >= 0 && nej < width)
                     {
-                        int 
+                        int WX = Gx[ni + 1][nj + 1];
+                        int WY = Gy[ni + 1][nj + 1];
+
                         sumRedx += image[nei][nej].rgbtRed;
                         sumGreenx += image[nei][nej].rgbtGreen;
                         sumBluex += image[nei][nej].rgbtBlue;

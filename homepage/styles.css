@@ -29,3 +29,9 @@ a{
 p{
     color: #198754;
 }
+.Objectives{
+    text-align: center;
+    color : black;
+    padding-left: 10%;
+    padding-right: 10%;
+}

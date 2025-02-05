@@ -1,5 +1,6 @@
 body{
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 .navbar navbar-expand-sm navbar-dark bg-dark{
     background-color: aliceblue;
@@ -34,4 +35,9 @@ p{
     color : black;
     padding-left: 10%;
     padding-right: 10%;
+}
+
+.row{
+    padding-left: 20px;
+    padding-right: 20px;
 }

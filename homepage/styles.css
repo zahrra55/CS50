@@ -1,5 +1,16 @@
-body{
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+html, body {
+    height: 100%; /* Ensures full height for the page */
+    margin: 0;    /* Removes default margin */
+    padding: 0;   /* Removes default padding */
+    display: flex; /* Enables Flexbox layout */
+    background-color: #f1f7f3;
+}
+
+body {
+    width: 100%;  /* Full width */
+    display: flex; /* Flexbox container for children */
+    flex-direction: column; /* Stacks children vertically */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 .navbar navbar-expand-sm navbar-dark bg-dark{
@@ -9,6 +20,49 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
     text-align: center;
     padding: 20px;
 }
+h1{
+    font-size: 100px;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    text-align: center;
+    background-color: aliceblue; /* Matching navbar background */
+    padding: 50px 10%;
+}
+
+.hero-section h1 {
+    font-size: 100px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #198754;
+    margin-bottom: 20px;
+}
+
+.hero-section .btn {
+    font-size: 1rem;
+    background-color: #198754;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hero-section .btn:hover {
+    background-color: #155f3e;
+}
+
+header{
+    background-color: #B0E0E6;
+    background-image: url("https://c.top4top.io/p_3324waju51.png");
+    padding: 20px;
+}
+
 ul.horizontal-list {
     list-style-type: none;
     margin: 0;
@@ -30,16 +84,148 @@ a{
 p{
     color: #198754;
 }
-.Objectives{
+
+.Objectives {
     text-align: center;
-    color : black;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 3%;
-    padding-top: 1%;
+    color: black;
+    padding: 1% 3% 1% 3%;
 }
 
 .row{
     padding-left: 50px;
     padding-right: 50px;
+}
+
+/* Styling for Cards */
+.card {
+    margin: 5% 1% ;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect: Scale Up & Add Shadow */
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Improve Card Title Appearance */
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #198754;
+}
+
+/* Subtitle Styling */
+.card h6 {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* List Inside Cards */
+.work {
+    padding-left: 20px;
+    color: #343a40;
+    font-size: 0.95rem;
+}
+
+/* Remove Default Bullet Styles */
+.work li {
+    list-style: none;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+/* Custom Bullet Design (Green Dot) */
+.work li::before {
+    content: "•";
+    color: #198754;
+    font-size: 1.2rem;
+    position: absolute;
+    left: -15px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    flex: 0 0 92%; /* Adjust the 300px to control the card width */
+  }
+
+
+.skillscard {
+    margin: 5% 1% ;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect: Scale Up & Add Shadow */
+.skillscard:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+#skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 40px;
+}
+
+.skillsrow {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.skills-table ul {
+    font-size: 17px !important; /* Force the font size */
+  }
+
+  .skills-table li {
+    font-size: 17px !important; /* Ensure list items follow the rule */
+  }
+
+.Skills table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.Skills th {
+    padding: 15px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.work li {
+    list-style-type: none;
+    color: #333;
+}
+table {
+    font-size: 30px;
+}
+.sectitle{
+    text-align: center;
+    margin-top: 1%;
+}
+.languages-table p {
+    font-size: 17px; /* Adjust font size as needed */
+    color: black;    /* Set text color to black */
+  }
+.text-center{
+    padding-top: 4%;
+    background-color: white;
+}
+
+
+/* Highlight search results */
+.highlight {
+    background-color: #b8e5ce;
+    color: black;
 }

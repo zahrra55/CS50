@@ -1,0 +1,23 @@
+HTML Tags:
+1.	<nav>
+2.	<div>
+3.	<header>
+4.	<section>
+5.	<img>
+6.	<a>
+7.	<button>
+8.	<form>
+9.	<ul>
+10.	<li>
+
+CSS Properties:
+1.	padding
+2.	display
+3.	box-shadow
+4.	transition
+5.	margin
+
+JavaScript & Bootstrap:
+    JavaScript: is used for dynamic search result highlighting.
+	Bootstrap: provides responsive design elements like navigation, cards, and layout structures.
+

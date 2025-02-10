@@ -1,0 +1,108 @@
+html, body {
+    height: 100%; /* Ensures full height for the page */
+    margin: 0;    /* Removes default margin */
+    padding: 0;   /* Removes default padding */
+    background-image: url("https://g.top4top.io/p_33254chtn1.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #333; /* Default text color */
+}
+
+/* Apply flex layout for body */
+body {
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: flex-start; /* Aligns content to top */
+    width: 100%;  /* Full width */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(248, 249, 250, 0.8) !important; /* Slightly more opaque */
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #198754; /* Green color on hover */
+    text-decoration: underline;
+}
+
+/* Header styling */
+header {
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* Adds depth */
+    background: rgba(0, 0, 0, 0.5); /* Darken background for contrast */
+    border-radius: 10px;
+    width: 60%; /* Adjust width */
+    margin: 0 auto; /* Center-align */
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* Text and paragraphs */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ddd; /* Light text for better contrast */
+    max-width: 80%; /* Limit paragraph width */
+    margin: 20px auto;
+    text-align: justify;
+}
+
+/* Footer styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark footer */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #198754; /* Green color on hover */
+    text-decoration: underline;
+}
+
+/* Search Highlight */
+.highlight {
+    background-color: #b8e5ce;
+    color: black;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+}
+
+/* Improved .text-center */
+.text-center {
+    padding-top: 5%;
+    opacity: 0.8;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+

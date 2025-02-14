@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="GET">
+        <div class="mb-3" style="margin: 1%">
+            <header class="alert alert-primary mb-0 text-center" role="alert"><h6>Quoted!</h6></header>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Shares</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>{{ stock.symbol }}</td>
+                            <td>{{ stock.name }}</td>
+                            <td>{{ stock.price | usd }}</td>
+                            <td>{{ stock.price | usd }}</td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+
+{% endblock %}

@@ -103,28 +103,28 @@ p{
     padding-right: 50px;
 }
 
-/* Styling for Cards */
+
 .card {
     margin: 5% 1% ;
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Hover Effect: Scale Up & Add Shadow */
+
 .card:hover {
-    transform: scale(1.05); /* Slightly enlarge the card */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Improve Card Title Appearance */
+
 .card-title {
     font-size: 1.3rem;
     font-weight: bold;
     color: #198754;
 }
 
-/* Subtitle Styling */
+
 .card h6 {
     font-size: 1rem;
     color: #6c757d;
@@ -133,21 +133,20 @@ p{
     padding-top: 10px;
 
 }
-/* List Inside Cards */
+
 .work {
     padding-left: 20px;
     color: #343a40;
     font-size: 0.95rem;
 }
 
-/* Remove Default Bullet Styles */
+
 .work li {
     list-style: none;
     margin-bottom: 8px;
     position: relative;
 }
 
-/* Custom Bullet Design (Green Dot) */
 .work li::before {
     content: "•";
     color: #198754;
@@ -169,14 +168,14 @@ p{
 #content {
     border-style: none;
     max-width: 40%;
-    height: 300px; /* Ensure the card has a height */
+    height: 300px;
 }
 
 #content .card-img-overlay {
     background-color: #f1f7f3;
-    background-size: cover; /* Ensures the image fully covers the area */
-    background-position: bottom; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
 }
@@ -184,25 +183,27 @@ p{
 
 .card-img-overlay {
     height: 50%;
+    display: grid; place-items: center;
 }
 
 .card-title2{
     padding:20px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 10px #155f3e;
+    font-size:60px;
 }
-.card-text2{
-    padding:20px;
-}
+
 .skillscard {
     margin: 5% 1% ;
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Hover Effect: Scale Up & Add Shadow */
 .skillscard:hover {
-    transform: scale(1.05); /* Slightly enlarge the card */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 #skills {
@@ -221,11 +222,11 @@ p{
 
 }
 .skills-table ul {
-    font-size: 17px !important; /* Force the font size */
+    font-size: 17px !important;
   }
 
 .skills-table li {
-    font-size: 17px !important; /* Ensure list items follow the rule */
+    font-size: 17px !important;
   }
 
 .Skills table {
@@ -251,23 +252,50 @@ table {
     margin-top: 1%;
 }
 .languages-table p {
-    font-size: 17px; /* Adjust font size as needed */
-    color: black;    /* Set text color to black */
+    font-size: 17px;
+    color: black;
   }
 .text-center{
     padding-top: 4%;
     background-color: white;
 }
 
-
-/* Highlight search results */
 .highlight {
     background-color: #b8e5ce;
     color: black;
 }
 
-/*Fade in animation*/
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
   }
+
+.game-container {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: auto;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: #eee;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+.cell.taken {
+    cursor: not-allowed;
+}
+.highlight {
+    background-color: yellow;  /* Make highlighted text visible */
+}

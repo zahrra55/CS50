@@ -9,6 +9,37 @@
   </head>
   <body>
 
+    <script>
+      function highlightSearch() {
+          const searchTerm = document.getElementById('searchInput').value;
+          if (!searchTerm) return;
+
+          removeHighlights();
+
+          const regex = new RegExp(`(${searchTerm})`, 'gi');
+
+          document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, a, span, div').forEach(node => {
+              if (node.childNodes.length === 1 && node.firstChild.nodeType === 3) {
+                  node.innerHTML = node.textContent.replace(regex, `<span class="highlight">$1</span>`);
+              }
+          });
+      }
+
+      function removeHighlights() {
+          document.querySelectorAll('.highlight').forEach(element => {
+              element.replaceWith(element.textContent);
+          });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+          var dropdowns = document.querySelectorAll('.dropdown-toggle');
+          dropdowns.forEach(function (dropdown) {
+              new bootstrap.Dropdown(dropdown);
+          });
+      });
+
+  </script>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,38 +90,135 @@
     <header class="hero text-center">
       <h1>Delicious Cooking Recipes!</h1>
     </header>
+    <h5 style="text-align: center">
+      <br>
+      “Cooking demands attention, patience, and above all, a respect for the gifts of the earth. It is a form of worship, a way of giving thanks.”
+      <br><br>– Judith B. Jones
+    </h5>
 
+    <h3 style="text-align: center; padding: 20px; color:#155f3e;">Here are my favorits!</h3>
     <section class="container">
       <div class="row">
         <div class="col-md-4">
           <div class="card">
-            <img src="recipe1.jpg" class="card-img-top" alt="Recipe 1">
+            <img src="https://tatyanaseverydayfood.com/wp-content/uploads/2021/02/Skinny-Chicken-Fettuccine-Alfredo-Recipe-2-768x1024.jpg" class="card-img-top" alt="Fettuccine Alfredo">
             <div class="card-body">
-              <h5 class="card-title">Spaghetti Carbonara</h5>
-              <p class="card-text">A classic Italian pasta dish with eggs, cheese, pancetta, and pepper.</p>
+              <h5 class="card-title">Fettuccine Alfredo</h5>
+              <p class="card-text">A rich and creamy Italian pasta dish made with butter, heavy cream, and Parmesan cheese.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Italian</li>
+              <li class="list-group-item">Pasta, Butter, Parmesan</li>
+              <li class="list-group-item">High in carbohydrates</li>
+            </ul>
+            <div class="card-body">
+              <a href="https://youtu.be/LPPcNPdq_j4?si=dUqcjgAuHOI57tsy" class="card-link">Try it!</a>
+              <a href="https://en.wikipedia.org/wiki/Fettuccine_Alfredo" class="card-link">More details</a>
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="card">
-            <img src="recipe2.jpg" class="card-img-top" alt="Recipe 2">
+            <img src="https://www.cookingclassy.com/wp-content/uploads/2014/07/pepperoni-pizza3+srgb..jpg" class="card-img-top" alt="Pizza">
             <div class="card-body">
-              <h5 class="card-title">Chicken Curry</h5>
-              <p class="card-text">A rich and spicy curry with tender chicken pieces in a flavorful sauce.</p>
+              <h5 class="card-title">Pizza</h5>
+              <p class="card-text">A globally beloved dish featuring a crispy crust topped with tomato sauce, cheese, and various toppings.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Italian</li>
+              <li class="list-group-item">Dough, Tomato Sauce, Cheese</li>
+              <li class="list-group-item">High in carbohydrates</li>
+            </ul>
+            <div class="card-body">
+              <a href="https://youtu.be/sv3TXMSv6Lw?si=88EdG-WdCTX1eMO5" class="card-link">Try it!</a>
+              <a href="https://en.wikipedia.org/wiki/Pizza" class="card-link">More details</a>
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="card">
-            <img src="recipe3.jpg" class="card-img-top" alt="Recipe 3">
+            <img src="https://hungryhealthyhappy.com/wp-content/uploads/2021/11/Lamb-Shish-Kebab-finished-1.jpg" class="card-img-top" alt="Kebab">
             <div class="card-body">
-              <h5 class="card-title">Vegetable Stir-fry</h5>
-              <p class="card-text">A quick and healthy dish with fresh vegetables sautéed in a savory sauce.</p>
+              <h5 class="card-title">Kebab</h5>
+              <p class="card-text">A popular grilled meat dish, often served with rice or flatbread.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Middle Eastern</li>
+              <li class="list-group-item">Ground meat, Spices, Skewers</li>
+              <li class="list-group-item">Low in carbohydrates</li>
+            </ul>
+            <div class="card-body">
+              <a href="https://youtu.be/PGSG08SyvLE?si=Y8U0SNDpVNetJPq-" class="card-link">Try it!</a>
+              <a href="https://en.wikipedia.org/wiki/Kebab" class="card-link">More details</a>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://wfg32p.s3.amazonaws.com/media/dishes/masgouf_7471.png" class="card-img-top" alt="Masgouf">
+            <div class="card-body">
+              <h5 class="card-title">Masgouf</h5>
+              <p class="card-text">A traditional Iraqi grilled fish dish, known for its smoky flavor.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Iraqi</li>
+              <li class="list-group-item">Carp Fish, Spices, Lemon</li>
+              <li class="list-group-item">Low in carbohydrates</li>
+            </ul>
+            <div class="card-body">
+              <a href="https://youtu.be/yKNnqWKKprQ?si=-PgJq-UGEUNlE8AZ" class="card-link">Try it!</a>
+              <a href="https://en.wikipedia.org/wiki/Masgouf" class="card-link">More details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://ministryofcurry.com/wp-content/uploads/2024/06/chicken-biryani.jpg" class="card-img-top" alt="Biryani">
+            <div class="card-body">
+              <h5 class="card-title">Biryani</h5>
+              <p class="card-text">A fragrant rice dish cooked with spices, meat, and vegetables.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Indian</li>
+              <li class="list-group-item">Rice, Spices, Meat</li>
+              <li class="list-group-item">High in carbohydrates</li>
+            </ul>
+            <div class="card-body">
+              <a href="https://youtu.be/6XlMguO9r-M?si=4Ea2SD7osIXCJiuE" class="card-link">Try it!</a>
+              <a href="https://en.wikipedia.org/wiki/Biryani" class="card-link">More details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://i0.wp.com/munchmealsbyjanet.com/wp-content/uploads/2021/04/IMG_5893.jpg?resize=1152%2C1536&ssl=1" class="card-img-top" alt="Quinoa Salad">
+            <div class="card-body">
+              <h5 class="card-title">Quinoa Salad</h5>
+              <p class="card-text">A healthy and refreshing salad packed with protein-rich quinoa and fresh vegetables.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">International</li>
+              <li class="list-group-item">Quinoa, Vegetables, Olive Oil</li>
+              <li class="list-group-item">Moderate in carbohydrates</li>
+            </ul>
+            <div class="card-body">
+              <a href="https://youtu.be/OQ9mU_zAtEs?si=8tDoU04WKz8YB91Q" class="card-link">Try it!</a>
+              <a href="https://cookieandkate.com/best-quinoa-salad-recipe/" class="card-link">More details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <footer>
       <p class="text-center">&copy; 2025 Zahraa I. Khalil</p>

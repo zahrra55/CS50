@@ -18,6 +18,6 @@ CSS Properties:
 5.	margin
 
 JavaScript & Bootstrap:
-    JavaScript: is used for dynamic search result highlighting.
-	Bootstrap: provides responsive design elements like navigation, cards, and layout structures.
+    JavaScript: is used for search result and highlighting + for making the games in the gaming page.
+	Bootstrap: for responsive design elements like nav bar and cards.
 

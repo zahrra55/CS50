@@ -116,6 +116,7 @@ def quote():
             return apology("Invalid symbol",400)
         return render_template("quoted.html", stock=stock)
     else:
+        db.execute("INSERT INTO purchase (symbol, shares, price) VALUES(?, ?, ?)", stock.symbol, stock.name, stock.price)
         return render_template("quote.html")
 
 

@@ -106,17 +106,22 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+
+
     if request.method == "POST":
         symbol = request.form.get("symbol")
         if not symbol:
             return apology("must provide symbol",400)
 
         stock = lookup(symbol)
+
         if not stock:
             return apology("Invalid symbol",400)
+ 
+        #db.execute("INSERT INTO purchase (symbol, shares, price) VALUES(?, ?, ?)", symbol, shares, price)
         return render_template("quoted.html", stock=stock)
+
     else:
-        db.execute("INSERT INTO purchase (symbol, shares, price) VALUES(?, ?, ?)", stock.symbol, stock.name, stock.price)
         return render_template("quote.html")
 
 

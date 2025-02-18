@@ -35,21 +35,73 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    return apology("TODO")
+    user_id = session["user_id"]
+    stocks = db.execute(
+        "SELECT symbol, SUM(shares) as total_shares FROM transactions WHERE user_id = ? GROUP BY symbol HAVING total_shares > 0",
+        user_id,
+    )
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+    total = cash
+
+    for stock in stocks:
+        quote_data = lookup(stock["symbol"])
+        stock["price"] = quote_data["price"]
+        stock["total_value"] = stock["price"] * stock["total_shares"]
+        total += stock["total_value"]
+
+    return render_template("index.html", stocks=stocks, cash=cash, total=total)
+
+
 
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+
+    if request.method == "POST":
+        symbol = request.form.get("symbol").strip().upper()
+        shares = request.form.get("shares")
+        stock = lookup(symbol)
+
+        if not stock:
+            return apology("Invalid symbol", 400)
+
+        try:
+            shares = int(shares)
+            if shares <= 0:
+                raise ValueError
+        except ValueError:
+            return apology("must provide a positive integer number of shares", 400)
+
+        user_id = session["user_id"]
+        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+        total_cost = stock["price"] * shares
+
+        if user_cash < total_cost:
+            return apology("cannot afford this purchase", 400)
+
+        db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_cost, user_id)
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
+                   user_id, stock["symbol"], shares, stock["price"])
+
+        return render_template("bought.html")
+
+    return render_template("buy.html")
+
 
 
 @app.route("/history")
 @login_required
 def history():
     """Show history of transactions"""
-    return apology("TODO")
+    user_id = session["user_id"]  # Missing in your original code
+    transactions = db.execute("SELECT symbol, shares, price, timestamp FROM transactions WHERE user_id = ? ORDER BY timestamp DESC", user_id)
+
+    if not transactions:
+        return apology("No transactions found", 400)
+
+    return render_template("history.html", transactions=transactions)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -106,8 +158,6 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-
-
     if request.method == "POST":
         symbol = request.form.get("symbol")
         if not symbol:
@@ -117,7 +167,7 @@ def quote():
 
         if not stock:
             return apology("Invalid symbol",400)
- 
+
         #db.execute("INSERT INTO purchase (symbol, shares, price) VALUES(?, ?, ?)", symbol, shares, price)
         return render_template("quoted.html", stock=stock)
 
@@ -171,4 +221,46 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+
+    if request.method == "POST":
+        symbol = request.form.get("symbol").strip().upper()
+        shares = request.form.get("shares")
+
+        try:
+            shares = int(shares)
+            if shares <= 0:
+                raise ValueError
+        except ValueError:
+            return apology("must provide a positive integer number of shares", 400)
+
+        user_id = session["user_id"]
+        result = db.execute(
+            "SELECT SUM(shares) as total_shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol",
+            user_id, symbol
+        )
+
+        if not result or result[0]["total_shares"] is None:
+            return apology("you do not own this stock", 400)
+
+        user_shares = result[0]["total_shares"]
+        if shares > user_shares:
+            return apology("too many shares", 400)
+
+        stock = lookup(symbol)
+        if not stock:
+            return apology("Stock data unavailable, try again later.", 503)
+
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
+                   user_id, symbol, -shares, stock["price"])
+        db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", stock["price"] * shares, user_id)
+
+        return redirect("/")
+
+    user_id = session["user_id"]
+    stocks = db.execute(
+        "SELECT symbol, SUM(shares) as total_shares FROM transactions WHERE user_id = ? GROUP BY symbol HAVING total_shares > 0",
+        user_id
+    )
+    return render_template("sell.html", stocks=stocks)
+
+

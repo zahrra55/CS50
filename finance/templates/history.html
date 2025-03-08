@@ -5,28 +5,28 @@
 {% endblock %}
 
 {% block main %}
-    <form action="/history" method="GET">
+<header class="alert alert-primary mb-0 text-center" role="alert"><h6>History!</h6></header>
         <div class="mb-3" style="margin: 1%">
-            <header class="alert alert-primary mb-0 text-center" role="alert"><h6>history!</h6></header>
             <table>
                 <thead>
                     <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th scope="col">Symbol</th>
+                        <th scope="col">Shares</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Transacted</th>
                     </tr>
                 </thead>
                 <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    {% for purchase in purchase %}
+                    <tr>
+                        <td>{{purchase['symbol']}}</td>
+                        <td>{{purchase['shares']}}</td>
+                        <td>{{purchase['price']}}</td>
+                        <td>{{purchase['timestamp']}}</td>
+                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
     </form>
-
 {% endblock %}

@@ -5,7 +5,9 @@
 {% endblock %}
 
 {% block main %}
-    <form action="/quote" method="post">
+<header class="alert alert-primary mb-0 text-center" role="alert"><h6>Check the price!</h6></header>
+
+    <form action="/quote" method="post" style="margin-top: 30px;">
         <div class="mb-3">
                 <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
         </div>

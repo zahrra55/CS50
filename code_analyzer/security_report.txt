@@ -1,0 +1,10 @@
+{
+    "code_snippet": "#include <stdio.h>\\nint main() {\\n   char buffer[10];\\n   gets(buffer);\\n   return 0;\\n}",
+    "prediction": "Secure",
+    "vulnerabilities": [
+        {
+            "vulnerability": "Buffer overflow risk due to unsafe `gets()` usage.",
+            "fix": "Use `fgets(buffer, sizeof(buffer), stdin);` instead."
+        }
+    ]
+}

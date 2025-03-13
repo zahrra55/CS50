@@ -16,9 +16,9 @@ jobs:
     - name: Upload zipped folder
       run: |
         mkdir -p CS50X
-        cp your-folder.zip CS50X/
+        cp CS50X_psets.zip CS50X/
 
     - name: Extract zipped folder
       run: |
-        unzip CS50X/your-folder.zip -d CS50X/
-        rm CS50X/your-folder.zip
+        unzip CS50X/CS50X_psets.zip -d CS50X/
+        rm CS50X/CS50X_psets.zip

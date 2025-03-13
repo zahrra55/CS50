@@ -1,0 +1,24 @@
+name: Extract Folder
+
+on: 
+  push:
+    paths:
+      - 'CS50X/**'
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository content
+      uses: actions/checkout@v2
+
+    - name: Upload zipped folder
+      run: |
+        mkdir -p CS50X
+        cp your-folder.zip CS50X/
+
+    - name: Extract zipped folder
+      run: |
+        unzip CS50X/your-folder.zip -d CS50X/
+        rm CS50X/your-folder.zip

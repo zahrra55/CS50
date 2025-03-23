@@ -1,8 +1,8 @@
 # Code Security Analyzer
 
-Code Security Analyzer is a comprehensive tool designed to analyze code files for potential vulnerabilities. It offers both a **web-based interface** and a **command-line interface (CLI)**, making it accessible for developers with different workflows. The project leverages a **pre-trained machine learning model** to detect vulnerabilities and provide actionable recommendations for fixing them. Additionally, it generates detailed security reports in PDF format.
+Code Security Analyzer is a tool designed to analyze code files for potential vulnerabilities. It offers both a **web-based interface** and a **command-line interface (CLI)**, making it accessible for developers with different workflows. The project leverages a **pre-trained machine learning model** to detect vulnerabilities and provide actionable recommendations for fixing them. Additionally, it generates detailed security reports in PDF format.
 
-[![Demo Video](https://img.shields.io/badge/Demo-Video-blue)](https://your-demo-video-url.com)
+[![Demo Video](https://img.shields.io/badge/Demo-Video-blue)](https://youtu.be/-d10O9g7cP0?si=Zke_5oUPLDyBEfUp)
 
 ---
 
@@ -125,7 +125,7 @@ Follow these steps to set up the project locally:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/code-security-analyzer.git
+   https://github.com/zahrra55/security-analyzer.git
    cd code-security-analyzer
    ```
 
@@ -141,7 +141,7 @@ Follow these steps to set up the project locally:
    ```
 
 4. **Download the Pre-trained Model**:
-   - Download the model file from [this link](https://your-model-download-link.com).
+   - Download the model from [this link](https://huggingface.co/huggingface/CodeBERTa-small-v1).
    - Place the model file in the `models/` directory.
 
 5. **Run the Application**:
@@ -169,7 +169,6 @@ security_analyze/
 ├── uploads/
 │   ├── example.c
 │   ├── example.py
-├── app.py
 ├── analyze.py
 ├── test_analyze.py
 ├── analysis_results.db
@@ -183,10 +182,14 @@ security_analyze/
 
 ### Web Mode
 
-1. Open the application in your browser.
-2. Upload a code file using the provided form.
-3. Click the "Analyze" button to start the security analysis.
-4. View the results, including any detected vulnerabilities and recommended fixes.
+1.Run the web app with the following command:
+   ```bash
+   python analyze.py --web
+   ```
+2. Open the application in your browser.
+3. Upload a code file using the provided form.
+4. Click the "Analyze" button to start the security analysis.
+5. View the results, including any detected vulnerabilities and recommended fixes.
 
 ### CLI Mode
 

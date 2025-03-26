@@ -38,7 +38,11 @@ int main(void)
 // Create a new individual with `generations`
 person *create_family(int generations)
 {
+<<<<<<< HEAD
     // TODO: Allocate memory for new person
+=======
+    // Allocate memory for new person
+>>>>>>> 2eac1f3c88d80ca5ed65e0c6004cd2bcf2156383
     person *p = (person *) malloc(sizeof(person));
 
     // If there are still generations left to create
@@ -48,11 +52,19 @@ person *create_family(int generations)
         person *parent0 = create_family(generations - 1);
         person *parent1 = create_family(generations - 1);
 
+<<<<<<< HEAD
         // TODO: Set parent pointers for current person
         p->parents[0] = parent0;
         p->parents[1] = parent1;
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
+=======
+        // Set parent pointers for current person
+        p->parents[0] = parent0;
+        p->parents[1] = parent1;
+
+        // Randomly assign current person's alleles based on the alleles of their parents
+>>>>>>> 2eac1f3c88d80ca5ed65e0c6004cd2bcf2156383
         p->alleles[0] = parent0->alleles[random() % 2];
         p->alleles[1] = parent1->alleles[random() % 2];
     }
@@ -60,16 +72,28 @@ person *create_family(int generations)
     // If there are no generations left to create
     else
     {
+<<<<<<< HEAD
         // TODO: Set parent pointers to NULL
         p->parents[0] = NULL;
         p->parents[1] = NULL;
 
         // TODO: Randomly assign alleles
+=======
+        // Set parent pointers to NULL
+        p->parents[0] = NULL;
+        p->parents[1] = NULL;
+
+        // Randomly assign alleles
+>>>>>>> 2eac1f3c88d80ca5ed65e0c6004cd2bcf2156383
         p->alleles[0] = random_allele();
         p->alleles[1] = random_allele();
     }
 
+<<<<<<< HEAD
     // TODO: Return newly created person
+=======
+    // Return newly created person
+>>>>>>> 2eac1f3c88d80ca5ed65e0c6004cd2bcf2156383
     return p;
 }
 
@@ -81,10 +105,17 @@ void free_family(person *p)
     {
         return;
     }
+<<<<<<< HEAD
     // TODO: Free parents recursively
     free_family(p->parents[0]);
     free_family(p->parents[1]);
     // TODO: Free child
+=======
+    // Free parents recursively
+    free_family(p->parents[0]);
+    free_family(p->parents[1]);
+    // Free child
+>>>>>>> 2eac1f3c88d80ca5ed65e0c6004cd2bcf2156383
     free(p);
 }
 

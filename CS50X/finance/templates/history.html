@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    history
+{% endblock %}
+
+{% block main %}
+<header class="alert alert-primary mb-0 text-center" role="alert"><h6>History!</h6></header>
+        <div class="mb-3" style="margin: 1%">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Symbol</th>
+                        <th scope="col">Shares</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Transacted</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for purchase in purchase %}
+                    <tr>
+                        <td>{{purchase['symbol']}}</td>
+                        <td>{{purchase['shares']}}</td>
+                        <td>{{purchase['price']}}</td>
+                        <td>{{purchase['timestamp']}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </form>
+{% endblock %}

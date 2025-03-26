@@ -1,0 +1,3 @@
+The listener’s audio aura can be characterized using average energy, valence, and danceability values, to know if they prefer loud or quiet music.
+But this could not be 100% correct because it only takes 100 songs, and ignores the frequency of listening and the diversity.
+A better idea is to weigh songs by how many times they play a song, putting in mind data like the category for example, and analyzing trends over time for better results.
